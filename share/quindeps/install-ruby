@@ -1,0 +1,8 @@
+#! /bin/sh
+
+RUBY_VERSION=2.1.2
+
+# Being overly strict about who gets which environment
+RBENV_VERSION=system rbenv versions | grep ${RUBY_VERSION} || RBENV_VERSION=system rbenv install $RUBY_VERSION
+RBENV_VERSION=${RUBY_VERSION} rbenv which bundle || RBENV_VERSION=${RUBY_VERSION} gem install bundler
+rbenv rehash 
