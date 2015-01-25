@@ -1,0 +1,11 @@
+#! /bin/sh
+
+QT_RBENV_ROOT=/usr/local/var/rbenv
+
+if [ "$(type -t "rbenv")" != "function" ]; then
+  if [ -z "${RBENV_ROOT}" ]; then
+    export RBENV_ROOT="${QT_RBENV_ROOT}"
+  fi
+ 
+  eval "$(rbenv init -)"
+fi
