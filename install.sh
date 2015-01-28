@@ -5,7 +5,7 @@ PREFIX_PATH="$2"
 
 INIT_SCRIPT="${HOMEBREW_PATH}/share/quindeps/init"
 
-grep quindeps ~/.bashrc > /dev/null || echo ". ${INIT_SCRIPT}" >> ~/.bashrc
+grep quindeps ~/.bash_profile > /dev/null || echo ". ${INIT_SCRIPT}" >> ~/.bash_profile
 grep quindeps ~/.zshrc > /dev/null || echo ". ${INIT_SCRIPT}" >> ~/.zshrc
 
 . "${PREFIX_PATH}/share/quindeps/init"
